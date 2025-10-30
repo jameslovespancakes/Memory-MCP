@@ -17,3 +17,10 @@ consolidation_memory
 
 #Start
 start_server.py
+
+#Build
+dist/
+build/
+*.egg-info/
+hippocampus_memory_mcp.egg-info/
+

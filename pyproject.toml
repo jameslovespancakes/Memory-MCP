@@ -1,13 +1,27 @@
 [project]
-name = "memory-mcp-server"
+name = "hippocampus-memory-mcp"
 version = "1.0.0"
-description = "MCP-compliant server for persistent hippocampus-style memory management"
-authors = [{name = "Memory MCP Server", email = "noreply@example.com"}]
+description = "MCP-compliant server for persistent hippocampus-style memory management with semantic search"
+authors = [{name = "jameslovespancakes", email = "jmlenhard@wm.edu"}]
 readme = "README.md"
 requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["mcp", "memory", "llm", "semantic-search", "vector-database", "faiss", "hippocampus"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
     "mcp>=1.2.0",
-    "fastmcp>=2.0.0", 
+    "fastmcp>=2.0.0",
     "fastapi>=0.104.0",
     "uvicorn>=0.24.0",
     "faiss-cpu>=1.7.4",
@@ -19,9 +33,18 @@ dependencies = [
     "aiofiles>=23.0.0"
 ]
 
+[project.urls]
+Homepage = "https://github.com/jameslovespancakes/Memory-MCP"
+Repository = "https://github.com/jameslovespancakes/Memory-MCP"
+Issues = "https://github.com/jameslovespancakes/Memory-MCP/issues"
+
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
 memory-mcp-server = "memory_mcp_server.server:main"
+
+[tool.setuptools.packages.find]
+include = ["memory_mcp_server*"]
+exclude = ["tests*", "test_memory_data*", "memory_data*"]

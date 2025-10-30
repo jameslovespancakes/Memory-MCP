@@ -1,0 +1,17 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include memory_mcp_server *.py
+exclude test_memory.py
+exclude example_usage.py
+exclude fix_pytorch_compatibility.py
+exclude start_server.py
+exclude run_mcp_server.py
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+prune test_memory_data
+prune memory_data
+prune assistant_memory
+prune consolidation_memory
+prune learning_memory

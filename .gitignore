@@ -1,0 +1,19 @@
+#Pycache
+__pycache__
+
+#Claude
+.claude
+
+#Test
+test_memory.py
+test_memory_data
+
+#Memory Data
+memory_data
+learning_memory
+test_memory_data
+assistant_memory
+consolidation_memory
+
+#Start
+start_server.py

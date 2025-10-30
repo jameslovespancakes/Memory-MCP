@@ -49,24 +49,13 @@ memory_stats        # 📊 Get system statistics
 
 ## 📦 Installation
 
-### Prerequisites
-
-- Python 3.9+
-- ~200MB disk space (for embedding model)
-
-### Setup in 3 Steps
+### Quick Install (Recommended)
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/jameslovespancakes/Memory-MCP.git
-cd Memory-MCP
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run the server
-python -m memory_mcp_server.server
+pip install hippocampus-memory-mcp
 ```
+
+**Prerequisites:** Python 3.9+ • ~200MB disk space (for embedding model)
 
 ### Claude Desktop Integration
 
@@ -77,14 +66,27 @@ Add to your Claude Desktop config (`claude_desktop_config.json`):
   "mcpServers": {
     "memory": {
       "command": "python",
-      "args": ["-m", "memory_mcp_server.server"],
-      "cwd": "/path/to/Memory-MCP"
+      "args": ["-m", "memory_mcp_server.server"]
     }
   }
 }
 ```
 
 > **🎉 That's it!** Claude will now have persistent memory across conversations.
+
+### Install from Source (Alternative)
+
+```bash
+# Clone the repository
+git clone https://github.com/jameslovespancakes/Memory-MCP.git
+cd Memory-MCP
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the server
+python -m memory_mcp_server.server
+```
 
 ## 📚 Documentation
 
